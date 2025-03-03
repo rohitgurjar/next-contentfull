@@ -6,8 +6,6 @@ interface CenterHeroBannerProps {
 }
 
 const CenterHeroBanner: React.FC<CenterHeroBannerProps> = ({ data }) => {
-  console.log("data_heroBanner", data);
-
   const jsonLd: any = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -40,8 +38,6 @@ const CenterHeroBanner: React.FC<CenterHeroBannerProps> = ({ data }) => {
       target: cta.url,
     })),
   };
-
-  console.log("Structured_Data_JSON_LD:", jsonLd);
 
   return (
     <>

@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export const GET_HOME_PAGE = gql`
-  query GetPageModules {
+  query GetHomePage {
     pageCollection(where: { slug: "home" }, limit: 1) {
       items {
         pageTitle

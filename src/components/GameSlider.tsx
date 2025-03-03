@@ -1,17 +1,19 @@
 "use client";
 import React from "react";
 import { GameSliderData } from "@/lib/types";
+import GameSliderSchema from "./GameSliderSchema";
 
 interface gameSliderProps {
   data: GameSliderData;
 }
 
 const GameSlider: React.FC<gameSliderProps> = ({ data }) => {
-  console.log("datadata_dataGanmeSlider", data.mediaCollection.items);
-
   const media = data.mediaCollection.items;
   return (
     <div className="py-8 bg-black text-center">
+      {/* GameSlider schema */}
+      <GameSliderSchema data={data} />
+
       <div className="mb-8">
         <h2 className="text-white">{data.heading}</h2>
         <p className="text-white">{data.description}</p>

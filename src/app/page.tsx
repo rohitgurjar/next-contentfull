@@ -20,11 +20,6 @@ import { GET_HOME_PAGE } from "@/Queries/HomePage.query";
 export default async function Home() {
   const { data } = await client.query({ query: GET_HOME_PAGE });
 
-  console.log(
-    "GET_HOME_PAGE_GET_HOME_PAGE",
-    data.pageCollection?.items[0].modulesCollection?.items
-  );
-
   interface HeroBanner extends HeroBannerData {
     __typename: "HeroBanner";
   }
@@ -63,7 +58,6 @@ export default async function Home() {
     | Faq;
 
   const renderModule = (module: ModuleType) => {
-    console.log(module.__typename);
     switch (module.__typename) {
       case "HeroBanner":
         return <CenterHeroBanner data={module} />;
@@ -79,8 +73,10 @@ export default async function Home() {
 
       case "Hiring":
         return <Hiring data={module} />;
+
       case "News":
         return <News data={module} />;
+
       case "Faq":
         return <FAQ data={module} />;
 

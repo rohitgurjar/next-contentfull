@@ -95,3 +95,44 @@ interface QuestionItem {
   question: string;
   answer: string;
 }
+
+export interface GameSliderPlayersData {
+  heading: string;
+  description: string;
+  subDescription: string;
+  mediaCollection: {
+    items: mediaCollectionItem[];
+  };
+}
+
+export interface skillzDifferenceData {
+  title: string;
+  description: string;
+  img: {
+    url: string;
+  };
+  mediaCollection: {
+    items: mediaCollectionItem[];
+  };
+}
+
+export interface farePlayData {
+  title: string;
+  description: string;
+  image: {
+    url: string;
+  };
+}
+
+export interface PlayersLoveSkillzData {
+  title: string;
+  imagesCollection: {
+    url: string;
+  };
+  modulesCollection: any;
+}
+
+export interface GetAheadOfTheGameData {
+  title: string;
+  moduleCollection: any;
+}

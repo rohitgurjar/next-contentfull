@@ -4,16 +4,13 @@ export const GET_HEADER = gql`
   query HeaderModule {
     headerCollection(limit: 1) {
       items {
-        __typename
-        ... on Header {
-          logo {
+        logo {
+          url
+        }
+        navBarLinkCollection {
+          items {
+            label
             url
-          }
-          navBarLinkCollection {
-            items {
-              label
-              url
-            }
           }
         }
       }
